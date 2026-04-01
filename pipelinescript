@@ -15,7 +15,7 @@ pipeline {
 
         stage('Build and Test') {
             steps {
-                bat 'mvn cleant test' for windows
+                bat 'mvn clean test' 
             }
         }
     }
