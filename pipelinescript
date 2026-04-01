@@ -20,3 +20,4 @@ pipeline {
         }
     }
 }
+//vs code mvn compile,mvn test,mvn clean install
