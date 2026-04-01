@@ -1,0 +1,22 @@
+pipeline {
+    agent any
+
+    tools {
+        maven 'M3'
+    }
+
+    stages {
+        stage('Checkout Git') {
+            steps {
+                git branch: 'main',
+                    url: 'https://github.com/sivaraj1606/maven-demo.git'
+            }
+        }
+
+        stage('Build and Test') {
+            steps {
+                bat 'mvn cleant test' for windows
+            }
+        }
+    }
+}
